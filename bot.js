@@ -17,11 +17,11 @@ async function msgAction (msg) {
 
     let msgtokens = msg.content.split(" ");
 
-    if (msg.content === "!help"){
-        msg.reply("Hello, I am Giffy, personalised by Omnius!\nI will provide you with your desired gifs in your desired channels.\nUse !giffy [search-term] to use Giffy anytime, anywhere. For this menu, type !help.");
+    if (msg.content === "$help"){
+        msg.reply("Hello, I am Giffy, personalised by Omnius!\nI will provide you with your desired gifs in your desired channels.\nUse $giffy [search-term] to use Giffy anytime, anywhere. For this menu, type $help.");
     }
 
-    else if (msgtokens[0] === "!giffy"){
+    else if (msgtokens[0] === "$giffy"){
 
         let msgsearch = msgtokens.slice(1).join(" ");
         let url = `https://g.tenor.com/v1/search?q=${msgsearch}&key=${process.env.TENOR_KEY}&limit=8`;
